@@ -1,0 +1,17 @@
+<script>
+    const btn2 = document.querySelectorAll(".btn-mouse");
+    let audio2 = new Audio('https://dl.dropbox.com/scl/fi/8fyfi9vmgv5o6loeehlp9/blue-press.wav?rlkey=7p24cuqj49q8p8vc0xzs7d7mr&st=3xeei0gx&dl=1');
+    let releaseAudio = new Audio('https://dl.dropbox.com/scl/fi/im3ag8q93pl828s13naer/blue-release.wav?rlkey=xrom0fbfvfd5wsctet6m5ckb0&st=knswom4z&dl=1');
+
+    btn2.forEach(btn => {
+        btn.addEventListener("mousedown", () => {
+            audio2.play();
+        });
+
+        btn.addEventListener("mouseup", () => {
+            btn.classList.toggle("active");
+            releaseAudio.play();
+        });
+    });
+    /* Recorded by QP at home, using my keyboard */
+</script>
